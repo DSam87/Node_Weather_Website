@@ -7,6 +7,9 @@ const { forecast } = require('../utils/forecast.js');
 // function that instantiates our app as an object of express.
 const app = express();
 
+// port
+const port = process.env.PORT || 3000;
+
 // function
 const { AsyncResource } = require('async_hooks');
 const { hasSubscribers } = require('diagnostics_channel');
@@ -89,6 +92,6 @@ app.get('*', (req, res) => {
   res.render('404', { title: '404', message: 'Page not found.', name: 'Sam' });
 });
 
-app.listen(3000, () => {
-  console.log('Server is running on port 3000...');
+app.listen(port, () => {
+  console.log('Server is running on port ' + port + '...');
 });
