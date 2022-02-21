@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/app.js",
-    "startDev": "nodemon"
+    "dev": "nodemon src/app.js -e js,hbs"
   },
   "author": "",
   "license": "ISC",
@@ -14,5 +14,8 @@
     "express": "^4.16.4",
     "hbs": "^4.0.1",
     "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.2.0"
   }
 }
