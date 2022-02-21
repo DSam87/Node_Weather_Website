@@ -17,7 +17,7 @@ const forecast = (lat, long, callback) => {
     } else {
       callback(
         undefined,
-        `The wether: ${body.current.weather_descriptions[0]}. The temp is ${f} degrees fahrenheit.`
+        `The weather: ${body.current.weather_descriptions[0]}. The temp is ${f} degrees fahrenheit.`
       );
     }
   });
